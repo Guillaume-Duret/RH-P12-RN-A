@@ -195,7 +195,7 @@
 
   <transmission name="tran_l2">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="rh_l2">
+    <joint name="rh_l_liaison">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_l2">
@@ -235,7 +235,7 @@
   <joint name="rh_l_liaison_to_support" type="fixed">
     <parent link="rh_p12_rn_l_liaison"/>
     <child link="rh_p12_rn_l_support"/>
-    <origin xyz="-0.007 -0.0067 0.00000000037" rpy="0.0 -1.5707963 3.1415927"/>
+    <origin xyz="0.00000000085 0.007 -0.0067" rpy="-1.5707963 0.0 3.1415927"/>
     <axis xyz="1 0 0"/>
     <limit velocity="6.5" effort="1000" lower="0.0" upper="1.0" />
     <dynamics damping="0.7"/>
