@@ -92,18 +92,18 @@
   </link>
 
   <!-- Right Joint 2 -->
-  <joint name="rh_r2" type="revolute">
+  <joint name="rh_r_liaison" type="revolute">
     <parent link="rh_p12_rn_r1"/>
-    <child link="rh_p12_rn_r2"/>
-    <origin xyz="0.0 0.0493634 0.0285" rpy="0 0 0"/>
-    <axis xyz="-1 0 0"/>
+    <child link="rh_p12_rn_r_liaison"/>
+    <origin xyz="0.0 0.0493634 0.0285" rpy="0 0 3.1415927"/>
+    <axis xyz="1 0 0"/>
     <limit velocity="6.5" effort="1000" lower="0.0" upper="1.0" />
     <dynamics damping="0.7"/>
   </joint>
 
   <transmission name="tran_r2">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="rh_r2">
+    <joint name="rh_r_liaison">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor_r2">
@@ -112,30 +112,132 @@
     </actuator>
   </transmission>
 
-  <!-- rh_p12_rn_r2 -->
-  <link name="rh_p12_rn_r2">
+  <!-- rh_p12_rn_r_liaison -->
+  <link name="rh_p12_rn_r_liaison">
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://rh_p12_rn_a_description/meshes/r2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://rh_p12_rn_a_description/meshes/liaison_left.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
 
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://rh_p12_rn_a_description/meshes/r2.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://rh_p12_rn_a_description/meshes/liaison_left.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="grey"/>
     </visual>
 
     <inertial>
-      <origin xyz="0.000 0.006 0.011" rpy="0 0 0"/>
+      <origin xyz="0.000 -0.006 0.011" rpy="0 0 0"/>
       <mass value="0.022"/>
       <!--<inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.0" />-->
       <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
     </inertial>
   </link>
+
+  <!-- Right Joint 2 -->
+  <joint name="rh_r_liaison_to_support" type="fixed">
+    <parent link="rh_p12_rn_r_liaison"/>
+    <child link="rh_p12_rn_r_support"/>
+    <origin xyz="0.00000000085 0.007 -0.0067" rpy="-1.5707963 0.0 3.1415927"/>
+    <axis xyz="1 0 0"/>
+    <limit velocity="6.5" effort="1000" lower="0.0" upper="1.0" />
+    <dynamics damping="0.7"/>
+  </joint>
+
+  <!-- rh_p12_rn_r_liaison -->
+  <link name="rh_p12_rn_r_support">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rh_p12_rn_a_description/meshes/support_finger_left.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rh_p12_rn_a_description/meshes/support_finger_left.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+
+    <inertial>
+      <origin xyz="0.000 -0.006 0.011" rpy="0 0 0"/>
+      <mass value="0.022"/>
+      <!--<inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.0" />-->
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+
+
+  <!-- rh_p12_rn_r_sensor -->
+  <link name="rh_p12_rn_r_sensor">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rh_p12_rn_a_description/meshes/gelsight_without_pad.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rh_p12_rn_a_description/meshes/gelsight_without_pad.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+
+    <inertial>
+      <origin xyz="0.000 -0.006 0.011" rpy="0 0 0"/>
+      <mass value="0.022"/>
+      <!--<inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.0" />-->
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+
+  <!-- Right Joint 2 -->
+  <joint name="rh_r_support_to_sensor" type="fixed">
+    <parent link="rh_p12_rn_r_support"/>
+    <child link="rh_p12_rn_r_sensor"/>
+    <origin xyz="0.00000000011 -0.060 0.012" rpy="-1.5707963 0.0 1.5707963"/>
+  </joint>
+
+
+  <!-- rh_p12_rn_r_pad -->
+  <link name="rh_p12_rn_r_pad">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rh_p12_rn_a_description/meshes/pad_left.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rh_p12_rn_a_description/meshes/pad_left.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+
+    <inertial>
+      <origin xyz="0.000 -0.006 0.011" rpy="0 0 0"/>
+      <mass value="0.022"/>
+      <!--<inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.0" />-->
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+
+  <!-- Right Joint 2 -->
+  <joint name="rh_r_sensor_to_pad" type="fixed">
+    <parent link="rh_p12_rn_r_sensor"/>
+    <child link="rh_p12_rn_r_pad"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+
+  </joint>
 
   <!-- Left Joint 1 -->
   <joint name="rh_l1" type="revolute">
