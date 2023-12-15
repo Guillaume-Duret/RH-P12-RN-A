@@ -117,14 +117,14 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://rh_p12_rn_a_description/meshes/liaison_left.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://rh_p12_rn_a_description/meshes/liaison.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
 
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://rh_p12_rn_a_description/meshes/liaison_left.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://rh_p12_rn_a_description/meshes/liaison.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="grey"/>
     </visual>
@@ -152,14 +152,14 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://rh_p12_rn_a_description/meshes/support_finger_left.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://rh_p12_rn_a_description/meshes/support_finger.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
 
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://rh_p12_rn_a_description/meshes/support_finger_left.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://rh_p12_rn_a_description/meshes/support_finger.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="grey"/>
     </visual>
@@ -211,14 +211,14 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://rh_p12_rn_a_description/meshes/pad_left.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://rh_p12_rn_a_description/meshes/pad.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
 
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://rh_p12_rn_a_description/meshes/pad_left.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://rh_p12_rn_a_description/meshes/pad.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="grey"/>
     </visual>
@@ -311,14 +311,14 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://rh_p12_rn_a_description/meshes/liaison_left.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://rh_p12_rn_a_description/meshes/liaison.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
 
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://rh_p12_rn_a_description/meshes/liaison_left.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://rh_p12_rn_a_description/meshes/liaison.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="grey"/>
     </visual>
@@ -348,14 +348,14 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://rh_p12_rn_a_description/meshes/support_finger_left.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://rh_p12_rn_a_description/meshes/support_finger.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
 
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://rh_p12_rn_a_description/meshes/support_finger_left.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://rh_p12_rn_a_description/meshes/support_finger.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="grey"/>
     </visual>
@@ -407,14 +407,14 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://rh_p12_rn_a_description/meshes/pad_left.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://rh_p12_rn_a_description/meshes/pad.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
 
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://rh_p12_rn_a_description/meshes/pad_left.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://rh_p12_rn_a_description/meshes/pad.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="grey"/>
     </visual>
