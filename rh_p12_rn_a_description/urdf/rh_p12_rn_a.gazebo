@@ -43,7 +43,7 @@
   </gazebo>
 
   <!-- rh_p12_rn_l2 -->
-  <gazebo reference="rh_p12_rn_l2">
+  <gazebo reference="rh_p12_rn_l_liaison">
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
     <material>Gazebo/Grey</material>
